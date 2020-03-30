@@ -203,6 +203,10 @@ func (w *MasterWindow) SetDropCallback(cb func([]string)) {
 	w.platform.SetDropCallback(cb)
 }
 
+func (w *MasterWindow) GetPlatform() imgui.Platform {
+	return w.platform
+}
+
 // Call the main loop.
 // loopFunc will be used to construct the ui.
 func (w *MasterWindow) Main(loopFunc func()) {
